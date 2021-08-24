@@ -10,7 +10,7 @@ import SwiftUI
 struct PatchingProgressView: View {
     var body: some View {
         VStack {
-            Text("Patching. This may take a while...")
+            Text("修补中，这可能需要一点时间...")
             ProgressView()
                 .progressViewStyle(LinearProgressViewStyle())
         }

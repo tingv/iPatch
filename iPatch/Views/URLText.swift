@@ -12,7 +12,7 @@ struct URLText: View {
     @State private var popoverPresented = false
     
     var body: some View {
-        Text(url?.lastPathComponent ?? "Choose one")
+        Text(url?.lastPathComponent ?? "选择一个文件")
             .onTapGesture { popoverPresented = true }
             .popover(isPresented: $popoverPresented) {
                 Text(url?.path ?? "")

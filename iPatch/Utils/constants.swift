@@ -7,7 +7,7 @@
 
 import Foundation
 
-let SUBSTRATEINFOTEXT = "iPatch supports injecting libsubstrate, libblackjack, and libhooker into IPAs. This feature is meant to be used when injecting substrate tweak dylibs into an IPA. If you are injecting an app tweak, toggle this option on. Otherwise, toggle it off."
+let SUBSTRATEINFOTEXT = "iPatch 支持将 libsubstrate、libblackjack 和 libhooker 注入到 IPA 包中。此功能旨在将 substrate 的 dylib 动态库文件注入到 IPA 包中时使用。如果您正在注入越狱程序插件，请启用此选项。否则，请将其关闭。"
 let EXECIPATCHDYLIBS = "@executable_path/iPatchDylibs"
 
 let AR = "/usr/bin/ar"
