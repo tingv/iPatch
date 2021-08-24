@@ -24,12 +24,17 @@ struct RootView: View {
                     .offset(x: 40)
             }
             HStack {
-                Text("Display Name")
+                Text("应用名称")
                 TextField("", text: $vm.displayName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             HStack {
-                Toggle("Inject Substrate", isOn: $vm.injectSubstrate)
+                Text("应用包名")
+                TextField("", text: $vm.bundleIdentifier)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+            }
+            HStack {
+                Toggle("注入 Substrate", isOn: $vm.injectSubstrate)
                 Image(systemName: "info.circle")
                     .onTapGesture { vm.substratePopoverPresented = true }
                     .popover(isPresented: $vm.substratePopoverPresented) { SubstrateInfo() }
@@ -37,12 +42,11 @@ struct RootView: View {
             Spacer()
             HStack {
                 Spacer()
-                Button("Patch", action: vm.patch)
+                Button("打补丁", action: vm.patch)
                     .disabled(!vm.readyToPatch)
                     .buttonStyle(PatchButtonStyle())
                 Spacer()
             }
-            Spacer()
             Text("Eamon Tracey © 2021")
         }
         .padding()
